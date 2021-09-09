@@ -5,11 +5,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
 );
+
+const greeting = React.createElement(
+    'h5',
+    {className: 'greeting'},
+    'Hello World'
+);
+
+const greetingEl = document.getElementById('greeting');
+
+ReactDOM.render(greeting, greetingEl);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
